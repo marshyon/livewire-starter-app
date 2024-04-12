@@ -1,10 +1,13 @@
 <?php
 
+use App\Livewire\Daisy\TestUI;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/daisy/test-ui', TestUI::class);
 
 Route::middleware([
     'auth:sanctum',
